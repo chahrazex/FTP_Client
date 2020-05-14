@@ -1,0 +1,125 @@
+.AnchorPane
+{
+    -fx-background-color:#edf1f6;
+}
+.AnchorPane2
+{
+    -fx-background-color:#37474f;
+}
+.AnchorPane3
+{
+    -fx-background-color : #ffffff ;
+}
+.JFXButton
+{
+    -fx-background-color:#748391;
+    -fx-background-radius: 40;
+}
+.JFXButton2
+{
+    -fx-background-color:#e1efff;
+    -fx-background-radius: 20;
+}
+.JFXTextField
+{
+    -fx-background-color:#ffffff;
+    -fx-background-radius: 20;
+}
+.list-view {
+    -fx-background-color: #ffffff, -fx-control-inner-background;
+    -fx-background-insets: 0, 1;
+    -fx-padding: 1;
+}
+.list-cell:filled:selected
+{
+    -fx-background-color: #37474f; /* 2 */
+    -fx-text-fill: white; /* 5 */
+}
+
+
+.HBox
+{
+    -fx-background-color: #ffffff;
+}
+.jfx-snackbar-content
+{
+    -fx-background-color: #28a745;
+    -fx-prompt-text-fill: white;
+    -fx-padding: 8;
+    -fx-background-radius: 15;
+}
+/* Styling the slider track */
+.jfx-slider > .track {
+    -fx-background-color: #F2F2F2;
+}
+
+/* Styling the slider thumb */
+.jfx-slider > .thumb {
+    -fx-background-color: #272343;
+}
+
+/* Styling the filled track */
+.jfx-slider > .colored-track {
+    -fx-background-color: #272343;
+}
+
+/* Styling the animated thumb */
+.jfx-slider > .animated-thumb
+{
+    -fx-background-color: #272343;
+}
+
+/* Styling the slider value text inside animated thumb */
+.jfx-slider .slider-value
+{
+    -fx-fill: white;
+    -fx-stroke: white;
+}
+/*Dialog Styling*/
+.dialogButtonNo
+{
+    -fx-background-color:#ffffff ;
+    -fx-border-color :#00a0ff ;
+    -fx-background-radius: 20 ;
+    -fx-border-radius: 20 ;
+    -fx-text-fill:#1b262c ;
+}
+.dialogButtonNo:hover
+{
+    -fx-background-color:#1b262c ;
+    -fx-background-radius: 20 ;
+    -fx-text-fill:#ffffff
+}
+.browseBtn
+{
+    -fx-background-color:#000000 ;
+    -fx-background-radius: 5 ;
+}
+.dialogButtonYes
+{
+     -fx-background-color:#00a0ff ;
+     -fx-background-radius: 20 ;
+     -fx-text-fill:#ffffff
+}
+.dialogButtonYes:hover
+{
+    -fx-background-color:#1b262c ;
+    -fx-background-radius: 20 ;
+    -fx-text-fill:#ffffff
+}
+.treeView
+{
+     -fx-background-color: #ffffff, -fx-control-inner-background;
+     -fx-background-insets: 0, 1;
+      -fx-padding: 1 ;
+}
+.jfx-snackbar-content2
+{
+    -fx-background-color: red;
+    -fx-prompt-text-fill: white;
+    -fx-padding: 15;
+    -fx-background-radius: 15;
+}
+
+
+

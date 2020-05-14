@@ -1,0 +1,11 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="FTPFinalVersion:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/FTPFinalVersion_jar</output-path>
+    <root id="archive" name="FTPFinalVersion.jar">
+      <element id="module-output" name="FTP_Client" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/src/Librarises/jfoenix-9.0.8.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/src/Librarises/fontawesomefx-8.1.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/src/Librarises/controlsfx-8.40.14.jar" path-in-jar="/" />
+    </root>
+  </artifact>
+</component>

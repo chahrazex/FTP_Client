@@ -1,0 +1,68 @@
+.AnchorPane
+{
+    -fx-background-color:#ffffff;
+}
+.AnchorPane2
+{
+    -fx-background-color:#f2f2f2;
+}
+.AnchorPane3
+{
+  -fx-background-color : #ffffff ;
+}
+.SocialMedia
+{
+    -fx-background-color: #f2f2f2;
+
+    -fx-border-radius: 10;
+    -fx-background-radius: 10;
+}
+.JFXTextField
+{
+    -fx-background-color:#f2f2f2;
+    -fx-border-color : #f2f2f2 ;
+    -fx-background-radius :5 ;
+    -fx-border-radius : 5;
+}
+.JFXButton
+{
+    -fx-background-color : #00a0ff ;
+    -fx-background-radius :5 ;
+
+}
+
+.jfx-snackbar-content
+{
+    -fx-background-color: red;
+    -fx-prompt-text-fill: white;
+    -fx-padding: 5;
+    -fx-background-radius: 5;
+}
+/* Styling the slider track */
+.jfx-slider > .track {
+    -fx-background-color: #F2F2F2;
+}
+
+/* Styling the slider thumb */
+.jfx-slider > .thumb {
+    -fx-background-color: #272343;
+}
+
+/* Styling the filled track */
+.jfx-slider > .colored-track {
+    -fx-background-color: #272343;
+}
+
+/* Styling the animated thumb */
+.jfx-slider > .animated-thumb
+{
+    -fx-background-color: #272343;
+}
+
+/* Styling the slider value text inside animated thumb */
+.jfx-slider .slider-value
+{
+    -fx-fill: white;
+    -fx-stroke: white;
+}
+

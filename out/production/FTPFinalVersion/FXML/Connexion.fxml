@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXPasswordField?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIcon?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.text.Font?>
+
+<StackPane fx:id="rootStackPane" prefHeight="556.0" prefWidth="1011.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Connexion">
+   <children>
+      <AnchorPane prefHeight="556.0" prefWidth="861.0" style="-fx-background-color: #ffffff;" stylesheets="@../CSS/StyleSheetConnexion.css">
+         <children>
+            <AnchorPane layoutX="304.0" prefHeight="556.0" prefWidth="643.0" styleClass="AnchorPane2" AnchorPane.bottomAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <children>
+                  <ImageView fx:id="imageFTP" fitHeight="391.0" fitWidth="477.0" layoutX="96.0" layoutY="83.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../Ressources/FTPimageBack.png" />
+                     </image>
+                  </ImageView>
+                  <HBox alignment="CENTER" layoutX="106.0" layoutY="474.0" prefHeight="66.0" prefWidth="432.0" spacing="20.0">
+                     <children>
+                        <JFXButton alignment="CENTER" buttonType="RAISED" contentDisplay="CENTER" onAction="#github" styleClass="SocialMedia" text=" ">
+                           <graphic>
+                              <FontAwesomeIcon iconName="GITHUB" />
+                           </graphic>
+                        </JFXButton>
+                        <JFXButton alignment="CENTER" buttonType="RAISED" contentDisplay="CENTER" layoutX="338.0" layoutY="24.0" onAction="#dribbbel" styleClass="SocialMedia" text=" ">
+                           <graphic>
+                              <FontAwesomeIcon fill="#e84d8b" iconName="DRIBBBLE" />
+                           </graphic>
+                        </JFXButton>
+                        <JFXButton alignment="CENTER" buttonType="RAISED" contentDisplay="CENTER" layoutX="83.0" layoutY="27.0" onAction="#facebook" styleClass="SocialMedia" text=" ">
+                           <graphic>
+                              <FontAwesomeIcon fill="#3b5998" iconName="FACEBOOK" />
+                           </graphic>
+                        </JFXButton>
+                        <JFXButton alignment="CENTER" buttonType="RAISED" contentDisplay="CENTER" layoutX="130.0" layoutY="27.0" onAction="#instagram" styleClass="SocialMedia" text=" ">
+                           <graphic>
+                              <FontAwesomeIcon iconName="INSTAGRAM">
+                                 <fill>
+                                    <LinearGradient endX="1.0" endY="1.0">
+                                       <stops>
+                                          <Stop color="#405de6" />
+                                          <Stop color="#5851db" offset="0.09037037037037045" />
+                                          <Stop color="#833ab4" offset="0.1825925925925927" />
+                                          <Stop color="#c13584" offset="0.3514814814814814" />
+                                          <Stop color="#e1306c" offset="0.460740740740741" />
+                                          <Stop color="#fd1d1d" offset="0.5718518518518519" />
+                                          <Stop color="#f56040" offset="0.6829629629629631" />
+                                          <Stop color="#f77737" offset="0.7929629629629629" />
+                                          <Stop color="#fcaf45" offset="0.9018518518518519" />
+                                          <Stop color="#ffdc80" offset="1.0" />
+                                       </stops>
+                                    </LinearGradient>
+                                 </fill>
+                              </FontAwesomeIcon>
+                           </graphic>
+                        </JFXButton>
+                        <JFXButton alignment="CENTER" buttonType="RAISED" contentDisplay="CENTER" layoutX="198.0" layoutY="27.0" onAction="#youtube" styleClass="SocialMedia" text=" ">
+                           <graphic>
+                              <FontAwesomeIcon fill="RED" iconName="YOUTUBE_PLAY" />
+                           </graphic>
+                        </JFXButton>
+                     </children>
+                  </HBox>
+               </children>
+            </AnchorPane>
+            <AnchorPane fx:id="container" layoutX="-3.0" prefHeight="538.0" prefWidth="371.0" styleClass="AnchorPane3">
+               <children>
+                  <Pane layoutX="58.0" layoutY="194.0" prefHeight="55.0" prefWidth="255.0">
+                     <children>
+                        <JFXTextField fx:id="usernameTextField" focusColor="WHITE" layoutX="7.0" layoutY="10.0" prefHeight="36.0" prefWidth="241.0" promptText="Username" styleClass="JFXTextField" unFocusColor="WHITE">
+                           <padding>
+                              <Insets left="25.0" />
+                           </padding>
+                        </JFXTextField>
+                        <FontAwesomeIcon fill="#37474f" iconName="USER" layoutX="14.0" layoutY="34.0" size="1.5em" />
+                     </children>
+                  </Pane>
+                  <Pane layoutX="58.0" layoutY="268.0" prefHeight="55.0" prefWidth="255.0">
+                     <children>
+                        <JFXPasswordField fx:id="passwordTextField" focusColor="WHITE" layoutX="8.0" layoutY="7.0" prefHeight="36.0" prefWidth="241.0" promptText="Password" styleClass="JFXTextField" unFocusColor="WHITE">
+                           <padding>
+                              <Insets left="25.0" />
+                           </padding>
+                        </JFXPasswordField>
+                        <FontAwesomeIcon fill="#37474f" iconName="LOCK" layoutX="14.0" layoutY="34.0" size="1.5em" />
+                     </children>
+                  </Pane>
+                  <ImageView fitHeight="89.0" fitWidth="70.0" layoutX="150.0" layoutY="38.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../Ressources/logo.png" />
+                     </image>
+                  </ImageView>
+                  <Pane layoutX="58.0" layoutY="377.0" prefHeight="55.0" prefWidth="255.0">
+                     <children>
+                        <JFXButton buttonType="RAISED" layoutX="7.0" layoutY="12.0" onAction="#SignIn" prefHeight="36.0" prefWidth="241.0" style="-fx-background-radius: 5; -fx-background-color: #00a0ff;" text="Sign in" textFill="WHITE">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </JFXButton>
+                        <FontAwesomeIcon fill="WHITE" iconName="SIGN_IN" layoutX="219.0" layoutY="38.0" size="1.5em" />
+                     </children>
+                  </Pane>
+               </children>
+            </AnchorPane>
+            <JFXButton contentDisplay="CENTER" layoutY="520.0" onAction="#Setting" style="-fx-background-color: #ffffff;" text=" " textFill="#37474f">
+               <graphic>
+                  <FontAwesomeIcon fill="#37474f" iconName="COG" size="1.5em" />
+               </graphic>
+            </JFXButton>
+         </children>
+      </AnchorPane>
+   </children>
+</StackPane>
