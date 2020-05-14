@@ -10,4 +10,5 @@ L’application que  j'ai réaliser dans ce TP permettra de  :
  - Supprimer ou Renommer un dossier /une fichier .
  
 # Visuals
-[![Watch the video](https://i.imgur.com/vKb2F1B.png)](https://www.youtube.com/watch?v=hiZSrO2bvrY)
+
+[![Watch the video](https://img.youtube.com/vi/hiZSrO2bvrY/maxresdefault.jpg)](https://youtu.be/hiZSrO2bvrY)
