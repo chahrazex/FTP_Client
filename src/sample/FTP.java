@@ -937,6 +937,7 @@ public class FTP  implements Initializable
                             }
                         } else {
                             label7.setText(Size / 1000 + " Ko" + "  " + Time);
+                            
                             hBox.getChildren().addAll(inconu, label, label7, pane, btn, btn2, btn3);
                         }
 

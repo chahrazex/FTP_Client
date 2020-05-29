@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXListView?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIcon?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TreeView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<StackPane fx:id="rootPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="556.0" prefWidth="1011.0" stylesheets="@../CSS/StyleSheetMain.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.FTP">
+   <children>
+      <AnchorPane fx:id="rootAnchorPane" prefHeight="556.0" prefWidth="992.0" styleClass="AnchorPane">
+         <children>
+            <AnchorPane layoutX="-3.0" prefHeight="556.0" prefWidth="68.0" styleClass="AnchorPane2" AnchorPane.bottomAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <children>
+                  <JFXButton prefWidth="36" prefHeight="36" contentDisplay="CENTER" layoutX="19.0" layoutY="481.0" onAction="#quit" styleClass="JFXButton" text=" ">
+                     <graphic>
+                        <FontAwesomeIcon fill="#37474f" iconName="SIGN_OUT" selectionStart="1" size="1.5em" />
+                     </graphic>
+                  </JFXButton>
+                  <JFXButton prefWidth="36" prefHeight="36" contentDisplay="CENTER" layoutX="19" layoutY="363.0"  onAction="#help" styleClass="JFXButton" text=" ">
+                     <graphic>
+                        <FontAwesomeIcon fill="#37474f" iconName="QUESTION" selectionStart="1" size="1.5em" />
+                     </graphic>
+                  </JFXButton>
+                  <ImageView fitHeight="32.0" fitWidth="30.0" layoutX="19.0" layoutY="19.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../Ressources/manager.png" />
+                     </image>
+                  </ImageView>
+                  <JFXButton prefWidth="36" prefHeight="36" contentDisplay="CENTER" layoutX="19" layoutY="291.0" onAction="#disconnect" styleClass="JFXButton" text=" ">
+                     <graphic>
+                        <FontAwesomeIcon fill="#10fc34" iconName="BOLT" selectionStart="1" size="1.5em" />
+                     </graphic>
+                  </JFXButton>
+               </children>
+            </AnchorPane>
+            <AnchorPane layoutX="65.0" layoutY="454.0" prefHeight="102.0" prefWidth="925.0" styleClass="AnchorPane" AnchorPane.rightAnchor="20.0">
+               <children>
+                  <Label layoutX="33.0" layoutY="18.0" text="Status : ">
+                     <font>
+                        <Font name="Cairo-Regular" size="14.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="32.0" layoutY="57.0" text="Status : ">
+                     <font>
+                        <Font name="Cairo-Regular" size="14.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="status2" layoutX="101.0" layoutY="57.0" prefHeight="17.0" prefWidth="671.0" text="Connect" />
+                  <Label fx:id="status1" layoutX="101.0" layoutY="18.0" text="Connect" />
+               </children></AnchorPane>
+            <AnchorPane fx:id="PaneDir" layoutX="66.0" layoutY="67.0" maxHeight="385.0" maxWidth="156.0" prefHeight="385.0" prefWidth="156.0" styleClass="AnchorPane3">
+               <children>
+                  <TreeView fx:id="treeview" onMouseClicked="#selectItem" prefHeight="385.0" prefWidth="156.0" styleClass="treeView" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+               </children></AnchorPane>
+            <AnchorPane fx:id="PrinciplePane" depthTest="ENABLE" layoutX="223.0" layoutY="67.0" prefHeight="385.0" prefWidth="671.0" styleClass="AnchorPane3">
+               <children>
+                  <Separator layoutX="26.0" layoutY="50.0" prefHeight="5.0" prefWidth="624.0" />
+                  <JFXListView fx:id="listView" layoutX="18.0" layoutY="64.0" prefHeight="313.0" prefWidth="637.0" />
+                  <JFXButton alignment="CENTER" contentDisplay="CENTER" layoutX="18.0" layoutY="24.0" onAction="#parentDirectory" style="-fx-background-color: #ffffff;" text=" ">
+                     <graphic>
+                        <FontAwesomeIcon iconName="ARROW_LEFT" size="1.2em" />
+                     </graphic>
+                  </JFXButton>
+                  <Label fx:id="path" layoutX="69.0" layoutY="28.0" />
+                  <FontAwesomeIcon fill="#afcada" iconName="FOLDER" layoutX="52.0" layoutY="41.0" />
+               </children>
+            </AnchorPane>
+            <AnchorPane layoutX="897.0" layoutY="67.0" prefHeight="385.0" prefWidth="114.0" styleClass="AnchorPane3" AnchorPane.rightAnchor="0.0">
+               <children>
+                  <VBox alignment="TOP_CENTER" layoutY="50.0" prefHeight="335.0" prefWidth="114.0" spacing="10.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="50.0">
+                     <children>
+                        <JFXButton contentDisplay="CENTER" onAction="#newFolder" prefHeight="36.0" prefWidth="36.0" styleClass="JFXButton2" text=" ">
+                           <VBox.margin>
+                              <Insets top="10.0" />
+                           </VBox.margin>
+                           <graphic>
+                              <FontAwesomeIcon fill="#00a0ff" iconName="FOLDER" size="1.5em" />
+                           </graphic>
+                        </JFXButton>
+                        <Label text="New Folder" textFill="#37474f">
+                           <font>
+                              <Font name="Cairo-Regular" size="12.0" />
+                           </font>
+                        </Label>
+                        <JFXButton contentDisplay="CENTER" onAction="#newFile" prefHeight="36.0" prefWidth="36.0" styleClass="JFXButton2" text=" ">
+                           <graphic>
+                              <FontAwesomeIcon fill="#00a0ff" iconName="FILE" size="1.5em" />
+                           </graphic>
+                           <VBox.margin>
+                              <Insets top="7.0" />
+                           </VBox.margin>
+                        </JFXButton>
+                        <Label text="New File" textFill="#37474f">
+                           <font>
+                              <Font name="Cairo-Regular" size="12.0" />
+                           </font>
+                        </Label>
+                        <JFXButton contentDisplay="CENTER" onAction="#uploadFile" prefHeight="36.0" prefWidth="36.0" styleClass="JFXButton2" text=" ">
+                           <graphic>
+                              <FontAwesomeIcon fill="#00a0ff" iconName="UPLOAD" size="1.5em" />
+                           </graphic>
+                           <VBox.margin>
+                              <Insets top="7.0" />
+                           </VBox.margin>
+                        </JFXButton>
+                        <Label text="Upload" textFill="#37474f">
+                           <font>
+                              <Font name="Cairo-Regular" size="12.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </VBox>
+               </children>
+            </AnchorPane>
+            <AnchorPane layoutX="67.0" prefHeight="66.0" prefWidth="943.0">
+               <children>
+                  <JFXTextField fx:id="showUsername" alignment="CENTER" editable="false" focusColor="WHITE" layoutX="14.0" layoutY="17.0" prefHeight="34.0" prefWidth="171.0" styleClass="JFXTextField" text="Username : chahrazed" unFocusColor="WHITE" />
+                  <JFXTextField fx:id="showHost" alignment="CENTER" editable="false" focusColor="WHITE" layoutX="277.0" layoutY="17.0" prefHeight="35.0" prefWidth="253.0" styleClass="JFXTextField" text="Host name : 127.0.0.1" unFocusColor="WHITE" />
+                  <JFXTextField fx:id="showPort" alignment="CENTER" editable="false" focusColor="WHITE" layoutX="605.0" layoutY="17.0" prefHeight="35.0" prefWidth="177.0" styleClass="JFXTextField" text="Port : 9090" unFocusColor="WHITE" />
+                  <Separator layoutX="566.0" layoutY="9.0" orientation="VERTICAL" prefHeight="49.0" prefWidth="8.0" />
+                  <Separator layoutX="224.0" layoutY="9.0" orientation="VERTICAL" prefHeight="49.0" prefWidth="8.0" />
+                  <Separator layoutX="825.0" layoutY="9.0" orientation="VERTICAL" prefHeight="49.0" prefWidth="8.0" />
+                  <JFXButton alignment="CENTER" contentDisplay="CENTER" layoutX="845.0" layoutY="17.0" onAction="#actualiser" prefHeight="35.0" prefWidth="84.0" style="-fx-background-color: #00a0ff; -fx-background-radius: 20;" text=" " textFill="WHITE">
+                     <graphic>
+                        <FontAwesomeIcon fill="WHITE" iconName="RETWEET" size="1.5em" />
+                     </graphic></JFXButton>
+               </children>
+            </AnchorPane>
+         </children>
+      </AnchorPane>
+   </children>
+</StackPane>
