@@ -894,63 +894,54 @@ public class FTP  implements Initializable
                     hBox.getChildren().clear();
                     hBox.getChildren().addAll(folder ,label,pane,btn2,btn3);
                 }
-                else
-                {
-                    int indexDebut = name.lastIndexOf(".")+1;
-                    String extension = name.substring(indexDebut);
-                    String size ;
-                    String Time = null;
-                    Double Size = null;
-                    try
-                    {
-                        Time = getModificationTime(name) ;
 
-                        size = getFilleSize(name);
-                        Size = Double.parseDouble(size.trim()) ;
-                    }
-                    catch (IOException e)
-                    {
-                        e.printStackTrace();
-                    }
-                    System.out.println(extension);
-                    if (name.contains(".txt") || name.contains(".pdf")
-                            ||name.contains(".png") || name.contains(".rar")
-                            || name.contains(".mp4") ||name.contains(".jpg") || name.contains(".zip"))
-                    {
-                        if (name.contains(".txt"))
-                        {
-                            label2.setText(Size/1000+" Ko"+"  "+Time );
-                            hBox.getChildren().addAll(file ,label,label2,pane,btn,btn2,btn3);
+                else {
+                    if (name.trim().equals(".") || name.trim().equals("..")) {
+                    } else {
+                        int indexDebut = name.lastIndexOf(".") + 1;
+                        String extension = name.substring(indexDebut);
+                        String size;
+                        String Time = null;
+                        Double Size = null;
+                        try {
+                            Time = getModificationTime(name);
+
+                            size = getFilleSize(name);
+                            Size = Double.parseDouble(size.trim());
+                        } catch (IOException e) {
+                            e.printStackTrace();
                         }
-                        if (name.contains(".png")|| name.contains(".jpg"))
-                        {
-                            label3.setText(Size/1000+" Ko"+"  "+Time);
-                            hBox.getChildren().addAll(image ,label,label3,pane,btn,btn2,btn3);
+                        System.out.println(extension);
+                        if (name.contains(".txt") || name.contains(".pdf")
+                                || name.contains(".png") || name.contains(".rar")
+                                || name.contains(".mp4") || name.contains(".jpg") || name.contains(".zip")) {
+                            if (name.contains(".txt")) {
+                                label2.setText(Size / 1000 + " Ko" + "  " + Time);
+                                hBox.getChildren().addAll(file, label, label2, pane, btn, btn2, btn3);
+                            }
+                            if (name.contains(".png") || name.contains(".jpg")) {
+                                label3.setText(Size / 1000 + " Ko" + "  " + Time);
+                                hBox.getChildren().addAll(image, label, label3, pane, btn, btn2, btn3);
+                            }
+                            if (name.contains(".pdf")) {
+                                label4.setText(Size / 1000 + " Ko" + "  " + Time);
+                                hBox.getChildren().addAll(pdf, label, label4, pane, btn, btn2, btn3);
+                            }
+                            if (name.contains(".rar") || name.contains(".zip")) {
+                                label5.setText(Size / 1000 + " Ko" + "  " + Time);
+                                hBox.getChildren().addAll(rar, label, label5, pane, btn, btn2, btn3);
+                            }
+                            if (name.contains(".mp4") || name.contains("mp3")) {
+                                label6.setText(Size / 1000 + " Ko" + "  " + Time);
+                                hBox.getChildren().addAll(mp4, label, label6, pane, btn, btn2, btn3);
+                            }
+                        } else {
+                            label7.setText(Size / 1000 + " Ko" + "  " + Time);
+                            hBox.getChildren().addAll(inconu, label, label7, pane, btn, btn2, btn3);
                         }
-                        if (name.contains(".pdf"))
-                        {
-                            label4.setText(Size/1000+" Ko"+"  "+Time);
-                            hBox.getChildren().addAll(pdf ,label,label4,pane,btn ,btn2,btn3);
-                        }
-                        if (name.contains(".rar") || name.contains(".zip"))
-                        {
-                            label5.setText(Size/1000+" Ko"+"  "+Time);
-                            hBox.getChildren().addAll(rar ,label,label5,pane,btn ,btn2,btn3);
-                        }
-                        if (name.contains(".mp4") || name.contains("mp3"))
-                        {
-                            label6.setText(Size/1000+" Ko"+"  "+Time);
-                            hBox.getChildren().addAll(mp4 ,label,label6,pane,btn ,btn2,btn3);
-                        }
-                    }
-                    else
-                    {
-                        label7.setText(Size/1000+" Ko"+"  "+Time);
-                        hBox.getChildren().addAll(inconu ,label,label7,pane,btn ,btn2,btn3);
-                    }
 
 
-
+                    }
                 }
                 setGraphic(hBox);
             }
