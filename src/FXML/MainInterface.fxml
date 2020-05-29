@@ -21,12 +21,12 @@
          <children>
             <AnchorPane layoutX="-3.0" prefHeight="556.0" prefWidth="68.0" styleClass="AnchorPane2" AnchorPane.bottomAnchor="0.0" AnchorPane.topAnchor="0.0">
                <children>
-                  <JFXButton prefWidth="36" prefHeight="36" contentDisplay="CENTER" layoutX="19.0" layoutY="481.0" onAction="#quit" styleClass="JFXButton" text=" ">
+                  <JFXButton contentDisplay="CENTER" layoutX="19.0" layoutY="481.0" onAction="#quit" prefHeight="36" prefWidth="36" styleClass="JFXButton" text=" ">
                      <graphic>
                         <FontAwesomeIcon fill="#37474f" iconName="SIGN_OUT" selectionStart="1" size="1.5em" />
                      </graphic>
                   </JFXButton>
-                  <JFXButton prefWidth="36" prefHeight="36" contentDisplay="CENTER" layoutX="19" layoutY="363.0"  onAction="#help" styleClass="JFXButton" text=" ">
+                  <JFXButton contentDisplay="CENTER" layoutX="19" layoutY="363.0" onAction="#help" prefHeight="36" prefWidth="36" styleClass="JFXButton" text=" ">
                      <graphic>
                         <FontAwesomeIcon fill="#37474f" iconName="QUESTION" selectionStart="1" size="1.5em" />
                      </graphic>
@@ -36,7 +36,7 @@
                         <Image url="@../Ressources/manager.png" />
                      </image>
                   </ImageView>
-                  <JFXButton prefWidth="36" prefHeight="36" contentDisplay="CENTER" layoutX="19" layoutY="291.0" onAction="#disconnect" styleClass="JFXButton" text=" ">
+                  <JFXButton contentDisplay="CENTER" layoutX="19" layoutY="291.0" onAction="#disconnect" prefHeight="36" prefWidth="36" styleClass="JFXButton" text=" ">
                      <graphic>
                         <FontAwesomeIcon fill="#10fc34" iconName="BOLT" selectionStart="1" size="1.5em" />
                      </graphic>
@@ -124,11 +124,11 @@
             </AnchorPane>
             <AnchorPane layoutX="67.0" prefHeight="66.0" prefWidth="943.0">
                <children>
-                  <JFXTextField fx:id="showUsername" alignment="CENTER" editable="false" focusColor="WHITE" layoutX="14.0" layoutY="17.0" prefHeight="34.0" prefWidth="171.0" styleClass="JFXTextField" text="Username : chahrazed" unFocusColor="WHITE" />
-                  <JFXTextField fx:id="showHost" alignment="CENTER" editable="false" focusColor="WHITE" layoutX="277.0" layoutY="17.0" prefHeight="35.0" prefWidth="253.0" styleClass="JFXTextField" text="Host name : 127.0.0.1" unFocusColor="WHITE" />
-                  <JFXTextField fx:id="showPort" alignment="CENTER" editable="false" focusColor="WHITE" layoutX="605.0" layoutY="17.0" prefHeight="35.0" prefWidth="177.0" styleClass="JFXTextField" text="Port : 9090" unFocusColor="WHITE" />
-                  <Separator layoutX="566.0" layoutY="9.0" orientation="VERTICAL" prefHeight="49.0" prefWidth="8.0" />
-                  <Separator layoutX="224.0" layoutY="9.0" orientation="VERTICAL" prefHeight="49.0" prefWidth="8.0" />
+                  <JFXTextField fx:id="showUsername" alignment="CENTER" editable="false" focusColor="WHITE" layoutX="14.0" layoutY="17.0" prefHeight="34.0" prefWidth="237.0" styleClass="JFXTextField" text="User : chahrazed" unFocusColor="WHITE" />
+                  <JFXTextField fx:id="showHost" alignment="CENTER" editable="false" focusColor="WHITE" layoutX="275.0" layoutY="17.0" prefHeight="35.0" prefWidth="332.0" styleClass="JFXTextField" text="Host name : 127.0.0.1" unFocusColor="WHITE" />
+                  <JFXTextField fx:id="showPort" alignment="CENTER" editable="false" focusColor="WHITE" layoutX="639.0" layoutY="17.0" prefHeight="35.0" prefWidth="177.0" styleClass="JFXTextField" text="Port : 9090" unFocusColor="WHITE" />
+                  <Separator layoutX="619.0" layoutY="9.0" orientation="VERTICAL" prefHeight="49.0" prefWidth="8.0" />
+                  <Separator layoutX="257.0" layoutY="9.0" orientation="VERTICAL" prefHeight="49.0" prefWidth="8.0" />
                   <Separator layoutX="825.0" layoutY="9.0" orientation="VERTICAL" prefHeight="49.0" prefWidth="8.0" />
                   <JFXButton alignment="CENTER" contentDisplay="CENTER" layoutX="845.0" layoutY="17.0" onAction="#actualiser" prefHeight="35.0" prefWidth="84.0" style="-fx-background-color: #00a0ff; -fx-background-radius: 20;" text=" " textFill="WHITE">
                      <graphic>
